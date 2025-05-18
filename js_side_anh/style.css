@@ -1,0 +1,58 @@
+body {
+  box-sizing: border-box;
+}
+
+h1 {
+  background: cyan;
+  width: 90vw;
+  border-radius: 50px;
+  text-align: center;
+  margin: 0 auto;
+  color: blue;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+}
+
+.label {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 1;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.5s;
+}
+
+.label h3 {
+  position: absolute;
+  font-size: 24px;
+  margin: 0;
+  bottom: 20px;
+  left: 30px;
+  opacity: 0;
+}
+
+.label.active {
+  flex: 10;
+}
+
+.label.active h3 {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+/* ẩn bớt khi màn hình thu nhỏ */
+
+@media (max-width: 720px) {
+  .label:nth-of-type(4),
+  .label:nth-of-type(5) {
+    display: none;
+  }
+}
